@@ -1,0 +1,101 @@
+﻿<Window
+    x:Class="FCFS.UI.Views.EditBurst"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:FCFS.UI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Edit CPU/IO Burst"
+    Width="360"
+    Height="400"
+    Background="{DynamicResource ApplicationBackgroundBrush}"
+    KeyDown="EditBurst_KeyDown"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid Margin="5" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <ScrollViewer
+            x:Name="Scroll"
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Margin="5"
+            VerticalAlignment="Stretch"
+            VerticalScrollBarVisibility="Auto">
+            <ItemsControl
+                x:Name="BurstControl"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Margin="0,0,0,5" Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="130" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                Grid.Column="0"
+                                Margin="5,0,5,5"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontSize="14"
+                                Text="{Binding Text, Mode=OneWay, StringFormat={}{0}:}" />
+                            <ui:NumberBox
+                                x:Name="BurstBox"
+                                Grid.Column="1"
+                                Margin="0,0,0,5"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center"
+                                InputScope="Number"
+                                Maximum="4294967295"
+                                Minimum="1"
+                                TextAlignment="Center"
+                                Value="{Binding Value, Mode=TwoWay}" />
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        <Grid
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <ui:Button
+                x:Name="AddButton"
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="5,0,5,5"
+                HorizontalAlignment="Stretch"
+                Content="Add Burst"
+                FontSize="14" />
+            <ui:Button
+                x:Name="ClearButton"
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="5,0,5,5"
+                HorizontalAlignment="Stretch"
+                Content="Clear All"
+                FontSize="14" />
+        </Grid>
+    </Grid>
+</Window>

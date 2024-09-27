@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "R7mpehF7Y2I=",
+  "success": true,
+  "projectFilePath": "E:\\BaiTapSinhVien\\He Dieu Hanh\\HDH\\FCFS\\Chương Trình FCFS\\Code\\FCFS.UI\\FCFS.UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pls\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Pls\\.nuget\\packages\\scottplot\\4.1.68\\scottplot.4.1.68.nupkg.sha512",
+    "C:\\Users\\Pls\\.nuget\\packages\\scottplot.wpf\\4.1.68\\scottplot.wpf.4.1.68.nupkg.sha512",
+    "C:\\Users\\Pls\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\Pls\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Pls\\.nuget\\packages\\wpf-ui\\2.1.0\\wpf-ui.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
